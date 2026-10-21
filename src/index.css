@@ -1,0 +1,454 @@
+@import "tailwindcss";
+
+:root {
+  /* brand / action */
+  --primary: #03137f;
+  --primary-text-hover: #001984;
+  --primary-hover: #020e63;
+  --toggle-on: #0c53a8;
+  --toggle-off: #d1d5db;
+
+  /* text (matches Daily Verse) */
+  --heading: #0a0847;
+  --text: #0a0847;
+  --text-emphasis: #0a0847cc;
+  --table-head-text: #0a0847cc;
+  --text-muted: #0a084799;
+  --placeholder: #0a084799;
+  --editor-body: #0a084799;
+
+  /* surfaces */
+  --page-bg: #f0f1f6;
+  --card-bg: #ffffff;
+  --table-head-bg: #f2f5fc;
+  --seg-active: #e6e6f2;
+  --hover-soft: #f7f7fc;
+  --hover-row: #fafafe;
+
+  /* borders */
+  --border: #e2dffc;
+  --divider: #f2f2f2;
+
+  /* status */
+  --green-bg: #ebf7ee;
+  --green-pill-bg: #e9f8e8;
+  --green: #29c31e;
+  --green-icon: #37b455;
+  --red-bg: #f8eaec;
+  --red: #c44552;
+  --indigo: #1e1782;
+  --orange-bg: #f6ebe4;
+  --orange: #b84909;
+  --orange-num: #b84c0b;
+  --delete-red: #c0264a;
+  --badge-gray: #eeedf0;
+
+  /* editor / controls */
+  --toolbar-fill: #f0f0f0;
+  --toolbar-border: #d0d0d0;
+  --toolbar-hover: #e6e6e6;
+  --highlight: #ffeb3b;
+  --text-color-icon: #e11d2e;
+  --menu-icon: #6d6b75;
+
+  /* help center */
+  --chip-bg: #f2f5fc;
+  --count-box-bg: #f3f4f9;
+  --kebab-bg: #e6e4ec;
+  --category-icon: #0b156d;
+  --count-text: #3a3464;
+  --stat-purple-bg: #ebe5fc;
+  --stat-purple: #6d0bf5;
+  --stat-purple-num: #5800f2;
+  --stat-green-bg: #ebf7f0;
+  --stat-green-icon: #37b455;
+  --stat-green-num: #0d0735;
+  --stat-orange-bg: #f6ebe4;
+  --stat-orange: #b84909;
+  --stat-orange-num: #bc4e09;
+  --stat-lav-bg: #e5e3f9;
+  --stat-lav: #2309cd;
+  --pill-published-bg: #e7fae6;
+  --pill-published: #29c31e;
+  --pill-draft-bg: #f6ebe4;
+  --pill-draft: #b84909;
+  --toggle-green: #39a740;
+
+  /* article modal */
+  --label: #403962;
+  --body-muted: #6f6c7b;
+  --counter: #6e678e;
+  --chip-text: #38356b;
+  --chip-x: #757eed;
+  --chip-edge: #e3e1f5;
+  --close: #2b41ea;
+  --toolbar-icon: #444444;
+  --btn-edge: #e3dff3;
+  --btn-text: #3e3a5e;
+  --select-chevron: #706990;
+  --overlay: rgba(3, 19, 127, 0.4);
+  --modal-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+
+  /* support inbox */
+  --support-overlay: rgba(0, 0, 0, 0.4);
+  --support-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.28);
+  --support-thread: #f2f5fc;
+  --support-avatar: #e8e7ff;
+  --support-avatar-text: #4338ca;
+  --support-note-bg: #eef0ff;
+  --support-note: #4f46e5;
+
+  /* AI engagement overview */
+  --icon-color: #3231d8;
+  --icon-bg: rgba(50, 49, 216, 0.1);
+  --toggle-knob: #eceff1;
+  --success: #16a34a;
+  --danger: #ef4444;
+
+  /* credit rules (figma) */
+  --line-faint: rgba(0, 25, 132, 0.1);
+  --field-border: #e2dffc;
+  --toggle-blue: #0b5ed7;
+}
+
+/* ==========================================================================
+   AUTH PAGES (Login / Forgot / Reset) — Figma design tokens
+   Central source for font, colors, radii and card spacing used by the auth
+   screens (AuthLayout + components/auth/*). Keeps values out of the JSX.
+   ========================================================================== */
+:root {
+  --auth-font: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* text */
+  --auth-ink: #0a1f6b;        /* headings: Welcome Back, Admin Login */
+  --auth-subtitle: #39406e;   /* darker subtitle / helper text */
+  --auth-label: #26305c;      /* field labels */
+  --auth-placeholder: #9aa1bd;/* lighter grey placeholders */
+  --auth-muted: #6b7280;      /* footnote */
+
+  /* action */
+  --auth-button: #0a1f8f;     /* royal navy (saturated) */
+  --auth-button-hover: #081672;
+  --auth-footer: #0a2463;     /* footer navy bar */
+
+  /* surfaces / lines */
+  --auth-input-border: #e5e7eb;
+  --auth-input-focus: #0a1f8f;
+  --auth-quote-bg: #eef4ff;
+  --auth-quote-border: #dce7fa;
+
+  /* shape */
+  --auth-radius: 7px;         /* inputs, button, quote box */
+  --auth-card-radius: 20px;   /* white card */
+  --auth-card-max: 680px;     /* ~47-48% of a 1440 viewport */
+  --auth-card-pad-x: 80px;    /* ~12% of card width on desktop */
+}
+
+/* ==========================================================================
+   SUBSCRIPTION — Cancellation & Free Trial tab (Figma tokens)
+   ========================================================================== */
+:root {
+  --cancel-border: #e2dffc;
+  --cancel-navy: #001984;
+  --cancel-navy-hover: #001266;
+  --cancel-ink: #0a0847;
+  --cancel-tile-blue: #6897f8;
+  --cancel-green: #22c55e;
+
+  /* gradient icon fills */
+  --cancel-grad-clock: linear-gradient(135deg, #00c0ff 0%, #5558ff 100%);
+  --cancel-grad-card: linear-gradient(135deg, #9cffac 0%, #00859c 100%);
+  --cancel-grad-eye: linear-gradient(135deg, #9e6af2 0%, #6d55fa 100%);
+  --cancel-eye-ring: #ede9fe;
+}
+
+.cancel-grad-clock {
+  background-image: var(--cancel-grad-clock);
+}
+.cancel-grad-card {
+  background-image: var(--cancel-grad-card);
+}
+.cancel-grad-eye {
+  background-image: var(--cancel-grad-eye);
+}
+
+/* Article modal scope: its Figma palette differs from the page it sits in. */
+.am-theme {
+  --heading: #0d083f;
+  --text: #3e356a;
+  --divider: #eaeaea;
+  --toggle-on: #2e9839;
+  --toolbar-fill: #eeeeee;
+  --toolbar-border: #cbcbcb;
+}
+
+/* Help Center page scope: this page's Figma palette differs from the Terms
+   pages, so the shared token names are re-pointed here instead of in :root. */
+.hc-theme {
+  --heading: #0b0241;
+  --text: #3e3666;
+  --text-muted: #7a7a84;
+  --placeholder: #a5a3ab;
+  --page-bg: #fbfaff;
+  --border: #e7e3fb;
+  --table-head-bg: #f2f6fa;
+  --divider: #f3f3f3;
+}
+
+/* AI Overview page scope: this page's Figma palette differs from the shared
+   token defaults, so these are re-pointed here instead of in :root. */
+.ai-theme {
+  --card-bg: #feffff;
+  --primary: #04127f;
+  --primary-hover: #0a1c68;
+  --toggle-on: #04127f;
+}
+
+/* AI Experience Setup page scope: Figma design tokens for this frame. */
+.aie-theme {
+  --text: #0a0847;
+  --text-80: rgba(10, 8, 71, 0.8);
+  --text-60: rgba(10, 8, 71, 0.6);
+  --card-bg: #feffff;
+  --line: rgba(0, 25, 132, 0.1);
+  --icon: #3231d8;
+  --icon-bg: rgba(50, 49, 216, 0.1);
+  --border-soft: #e2dffc;
+  --success-bg: rgba(33, 172, 28, 0.1);
+  --success-bd: #daf3c8;
+  --success-fg: #21ac1c;
+  --danger: #ef4444;
+  --navy: #04127f;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text-hover);
+  --color-primary-hover: var(--primary-hover);
+  --color-toggle-on: var(--toggle-on);
+  --color-toggle-off: var(--toggle-off);
+  --color-heading: var(--heading);
+  --color-body: var(--text);
+  --color-emphasis: var(--text-emphasis);
+  --color-sub: var(--text-muted);
+  --color-thead-text: var(--table-head-text);
+  --color-placeholder-ink: var(--placeholder);
+  --color-editor: var(--editor-body);
+  --color-page: var(--page-bg);
+  --color-card: var(--card-bg);
+  --color-thead: var(--table-head-bg);
+  --color-seg: var(--seg-active);
+  --color-soft: var(--hover-soft);
+  --color-row-hover: var(--hover-row);
+  --color-edge: var(--border);
+  --color-divider: var(--divider);
+  --color-green-bg: var(--green-bg);
+  --color-green-pill: var(--green-pill-bg);
+  --color-green: var(--green);
+  --color-green-icon: var(--green-icon);
+  --color-red-bg: var(--red-bg);
+  --color-red: var(--red);
+  --color-indigo: var(--indigo);
+  --color-orange-bg: var(--orange-bg);
+  --color-orange: var(--orange);
+  --color-orange-num: var(--orange-num);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-icon-color: var(--icon-color);
+  --color-icon-bg: var(--icon-bg);
+  --color-toggle-knob: var(--toggle-knob);
+  --color-line-faint: var(--line-faint);
+  --color-field-border: var(--field-border);
+  --color-toggle-blue: var(--toggle-blue);
+  --color-border-soft: var(--border-soft, var(--border));
+  --color-badge-gray: var(--badge-gray);
+  --color-toolbar: var(--toolbar-fill);
+  --color-toolbar-edge: var(--toolbar-border);
+  --color-toolbar-hover: var(--toolbar-hover);
+  --color-highlight: var(--highlight);
+  --color-color-icon: var(--text-color-icon);
+  --color-menu-icon: var(--menu-icon);
+  --color-chip: var(--chip-bg);
+  --color-count-box: var(--count-box-bg);
+  --color-kebab: var(--kebab-bg);
+  --color-category-icon: var(--category-icon);
+  --color-count-text: var(--count-text);
+  --color-stat-purple-bg: var(--stat-purple-bg);
+  --color-stat-purple: var(--stat-purple);
+  --color-stat-purple-num: var(--stat-purple-num);
+  --color-stat-green-bg: var(--stat-green-bg);
+  --color-stat-green-icon: var(--stat-green-icon);
+  --color-stat-green-num: var(--stat-green-num);
+  --color-stat-orange-bg: var(--stat-orange-bg);
+  --color-stat-orange: var(--stat-orange);
+  --color-stat-orange-num: var(--stat-orange-num);
+  --color-stat-lav-bg: var(--stat-lav-bg);
+  --color-stat-lav: var(--stat-lav);
+  --color-pill-published-bg: var(--pill-published-bg);
+  --color-pill-published: var(--pill-published);
+  --color-pill-draft-bg: var(--pill-draft-bg);
+  --color-pill-draft: var(--pill-draft);
+  --color-toggle-green: var(--toggle-green);
+  --color-label: var(--label);
+  --color-body-muted: var(--body-muted);
+  --color-counter: var(--counter);
+  --color-chip-text: var(--chip-text);
+  --color-chip-x: var(--chip-x);
+  --color-chip-edge: var(--chip-edge);
+  --color-close: var(--close);
+  --color-toolbar-icon: var(--toolbar-icon);
+  --color-btn-edge: var(--btn-edge);
+  --color-btn-text: var(--btn-text);
+  --color-select-chevron: var(--select-chevron);
+  --color-support-thread: var(--support-thread);
+  --color-support-avatar: var(--support-avatar);
+  --color-support-avatar-text: var(--support-avatar-text);
+  --color-support-note-bg: var(--support-note-bg);
+  --color-support-note: var(--support-note);
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-poppins: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-navy: #0f1a4a;
+  --color-navy-deep: #13214f;
+  --color-navy-hover: #1e2a5e;
+  --color-muted: #cbd5e1;
+  --color-subtext: #94a3b8;
+  --color-line: #e5e7eb;
+  --color-surface: #f8fafc;
+  --color-gold: #eab308;
+  --color-brand-navy: #1e1b4b;
+  --color-brand-navy-hover: #302b63;
+  --color-brand-indigo: #4f46e5;
+  --color-brand-indigo-soft: #eef0ff;
+  --color-brand-badge: #f3f1ff;
+  --color-brand-gold-soft: #fef9e7;
+  --color-brand-gold: #f5c518;
+  --color-brand-border: #e5e7eb;
+
+  --radius-nav: 10px;
+
+  --color-ink: #0a0847;
+  --color-ink-body: #3b396c;
+  --color-ink-muted: #6c6b91;
+  --color-drag: #001984;
+  --color-remove: #193090;
+  --color-edge-input: #e2dffc;
+  --color-edge-row: #ececec;
+  --color-action-soft: #f0f1fc;
+
+  /* ---- admin form / mystery card palette ---- */
+  --color-action-navy: #001984;
+  --color-strong-navy: #0b0b6b;
+  --color-deep-navy: #2a2750;
+  --color-grey-navy: #6b6f8d;
+  --color-faint-navy: #8b8fa8;
+  --color-field-navy: #4a4d6a;
+  --color-publish-navy: #00007a;
+
+  --color-page-canvas: #f8f8ff;
+
+  --color-lavender: #eef0fb;
+  --color-lavender-deep: #e8f0fb;
+  --color-lavender-line: #cfe0f5;
+  --color-lavender-hair: #eef0f8;
+  --color-lavender-slot: #dde3f5;
+
+  --color-blush: #fbe3e8;
+  --color-blush-edge: #f3c5cf;
+  --color-rose: #d1264a;
+  --color-rose-strong: #c2185b;
+
+  --color-pale-indigo: #e6e8fb;
+  --color-indigo-ink: #2b2fa8;
+  --color-pale-green: #e6f6ea;
+  --color-green-ink: #2e9e3e;
+
+  --color-ornament: #d9a93a;
+  --color-star: #f5a623;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  /* keep the scrollbar gutter reserved so page content stays centered
+     whether or not the document is scrollable (collapsed sidebar fix) */
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: #0f1a4a;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* ==========================================================================
+   MODAL OPEN / CLOSE ANIMATIONS — fade + scale 95% -> 100% over 200ms
+   ========================================================================== */
+@keyframes overlay-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.anim-overlay-in {
+  animation: overlay-fade 200ms ease-out both;
+}
+
+.anim-dialog-in {
+  animation: dialog-pop 200ms ease-out both;
+}
+
+/* ==========================================================================
+   WORD SEARCH — CSV UPLOAD DROP ZONE
+   Tailwind's `border-dashed` only sets border-style and falls back to the
+   browser default dash rhythm. The design calls for a 6px dash / 6px gap,
+   which needs border-dasharray, so it is declared as a utility here.
+   ========================================================================== */
+@utility csv-dash {
+  border-style: dashed;
+  border-width: 1px;
+  border-dasharray: 6 6;
+}
+
+:root { --border-soft: #E2DFFC; --page-bg-ld: #F9FAFE; --primary-ld: #001984; --toolbar-border-ld: #CCCCCC; }
+
+.ld-theme {
+  --page-bg: #F9FAFE;
+  --primary: #001984;
+  --primary-hover: color-mix(in srgb, #001984 90%, #000);
+  --toolbar-border: #CCCCCC;
+  --border-soft: #E2DFFC;
+  --border: #E2DFFC;
+  --edge: #E2DFFC;
+}

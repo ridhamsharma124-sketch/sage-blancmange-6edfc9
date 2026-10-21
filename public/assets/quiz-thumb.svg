@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 88" width="128" height="88" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2f1c"/>
+      <stop offset="0.55" stop-color="#2a2417"/>
+      <stop offset="1" stop-color="#161410"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.62" cy="0.34" r="0.55">
+      <stop offset="0" stop-color="#e8b466" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#a8763a" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2a17"/>
+      <stop offset="1" stop-color="#14130c"/>
+    </linearGradient>
+    <linearGradient id="trunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#241a10"/>
+      <stop offset="0.5" stop-color="#4a3620"/>
+      <stop offset="1" stop-color="#1d150d"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9b295"/>
+      <stop offset="1" stop-color="#6d5a45"/>
+    </linearGradient>
+    <linearGradient id="serpent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7f8f4a"/>
+      <stop offset="1" stop-color="#39441f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="128" height="88" fill="url(#sky)"/>
+  <rect width="128" height="88" fill="url(#glow)"/>
+
+  <path d="M0 62 L128 55 L128 88 L0 88 Z" fill="url(#ground)"/>
+
+  <path d="M104 88 L101 44 Q100 30 108 24 L120 16 L128 8 L128 88 Z" fill="url(#trunk)"/>
+  <path d="M102 40 Q88 34 76 38 Q68 41 64 36" fill="none" stroke="#4a3620" stroke-width="5" stroke-linecap="round"/>
+  <path d="M103 30 Q92 22 84 24" fill="none" stroke="#42311d" stroke-width="4" stroke-linecap="round"/>
+
+  <path d="M76 38 Q70 34 74 29 Q79 25 84 29 Q88 33 83 37 Q78 41 73 37 Q68 33 71 28 Q75 23 82 25 Q90 28 88 36 Q86 44 76 45 Q64 46 60 38 Q56 30 63 25"
+        fill="none" stroke="url(#serpent)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M63 25 Q57 21 53 24 Q50 27 53 30 Q56 33 60 30" fill="#5c6b33"/>
+  <circle cx="55.5" cy="25.5" r="1.2" fill="#f2d98a"/>
+
+  <ellipse cx="40" cy="78" rx="15" ry="4" fill="#0d0c08" opacity="0.55"/>
+  <path d="M40 30 Q48 33 49 44 Q50 54 47 64 Q45 72 44 79 L36 79 Q35 71 33 63 Q30 53 31 43 Q32 33 40 30 Z" fill="url(#dress)"/>
+  <path d="M40 42 Q47 45 53 52" fill="none" stroke="#b8a184" stroke-width="4" stroke-linecap="round"/>
+  <path d="M33 44 Q27 50 24 57" fill="none" stroke="#b8a184" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="40" cy="24" r="7.5" fill="#cbae8d"/>
+  <path d="M33 23 Q33 15 40 15 Q47 15 47 23 Q47 27 44 29 Q46 22 40 21 Q34 20 34 27 Q33 26 33 23 Z" fill="#2e2318"/>
+  <path d="M46 26 Q50 30 49 37 Q48 42 44 44" fill="none" stroke="#2e2318" stroke-width="3" stroke-linecap="round"/>
+</svg>
